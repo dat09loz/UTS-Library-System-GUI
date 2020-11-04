@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.ShowAvailableBooksController"
+      alignment="center" spacing="10"  prefWidth="290" prefHeight="500"
+      styleClass="root"
+>
+    
+    <TableView fx:id="allBooksTv" prefWidth="220" prefHeight="460" >
+        <placeholder>
+            <Label text="No Books on the Shelf"/>
+        </placeholder>
+        <columns>
+            <TableColumn styleClass="table-cell, table-row-cell" text="Title">
+                <cellValueFactory><PropertyValueFactory property="title"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn styleClass="table-cell, table-row-cell" text="Author">
+                <cellValueFactory><PropertyValueFactory property="author"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn styleClass="table-cell, table-row-cell" text="Genre">
+                <cellValueFactory><PropertyValueFactory property="genre"/></cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    
+    <Button text="Close" styleClass="button" fx:id="closeBtn" onAction="#handleClose"/>
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

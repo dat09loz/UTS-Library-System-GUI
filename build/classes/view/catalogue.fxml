@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.CatalogueController"
+      alignment="center" spacing="10" 
+      styleClass="root"
+>
+    
+    <HBox spacing="10" styleClass="header" alignment="CENTER">
+        <ImageView><image><Image url="@UTS.png"/></image></ImageView>
+        <Label text="Library System" styleClass="h1"/>
+    </HBox>
+    
+    <VBox alignment="center" spacing="20" styleClass="footer">
+        <Button text="All Books" styleClass="button" onAction="#handleAllBooks"/>
+        <Button text="Available Books" styleClass="button" onAction="#handleAvailableBooks"/>
+        <Button text="Books By Genre" styleClass="button" onAction="#handleBooksByGenre"/>
+        <Button text="Books By Author" styleClass="button" onAction="#handleBooksByAuthor"/>
+        <Button text="Borrow Books" styleClass="button" onAction="#handleBorrowBooks"/>
+        <Button text="Return Books" styleClass="button" onAction="#handleReturnBooks"/>
+        <Button text="Place Hold" styleClass="button" onAction="#handlePlaceHold"/>
+        <Button text="Exit Catalogue" styleClass="button" onAction="#handleExitCatalogue"/>
+    </VBox>    
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>
